@@ -1,21 +1,19 @@
 /*!
-Theme Name: discovery bbq
+Theme Name: Imagine Interior
 Theme URI: http://underscores.me/
-Author: Andy Gao
-Author URI: http://www.gtechsolution.com.au
-Description: Discovery BBQ New Site
+Author: Andy
+Author URI: http://gtechsolution.com.au
+Description: Imagine Interior by Andy
 Version: 1.0.0
-Tested up to: 5.4
-Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: discovery-bbq
+Text Domain: imagine_interior
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned.
+Use it to make something cool, have fun, and share what you've learned with others.
 
-discovery bbq is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Imagine Interior is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -25,78 +23,94 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-# Generic
-	- Normalize
-	- Box sizing
-# Base
-	- Typography
-	- Elements
-	- Links
-	- Forms
-## Layouts
-# Components
-	- Navigation
-	- Posts and pages
-	- Comments
-	- Widgets
-	- Media
-	- Captions
-	- Galleries
-# plugins
-	- Jetpack infinite scroll
-# Utilities
-	- Accessibility
-	- Alignments
-
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
 --------------------------------------------------------------*/
-
-// Import variables and mixins.
-@import "abstracts/abstracts";
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
 
 /*--------------------------------------------------------------
-# Generic
+# Normalize
 --------------------------------------------------------------*/
-
-/* Normalize
---------------------------------------------- */
-@import "generic/normalize";
-
-/* Box sizing
---------------------------------------------- */
-@import "generic/box-sizing";
+@import "normalize";
 
 /*--------------------------------------------------------------
-# Base
+# Typography
 --------------------------------------------------------------*/
-@import "base/base";
+@import "typography/typography";
 
 /*--------------------------------------------------------------
-# Layouts
+# Elements
 --------------------------------------------------------------*/
-// @import "layouts/content-sidebar"; // Uncomment this line for a sidebar on right side of your content.
-// @import "layouts/sidebar-content"; // Uncomment this line for a sidebar on left side of your content.
+@import "elements/elements";
 
 /*--------------------------------------------------------------
-# Components
+# Forms
 --------------------------------------------------------------*/
-@import "components/components";
+@import "forms/forms";
 
 /*--------------------------------------------------------------
-# Plugins
+# Navigation
 --------------------------------------------------------------*/
-
-/* Jetpack infinite scroll
---------------------------------------------- */
-@import "plugins/jetpack/infinite-scroll";
+@import "navigation/navigation";
 
 /*--------------------------------------------------------------
-# Utilities
+# Accessibility
 --------------------------------------------------------------*/
+@import "modules/accessibility";
 
-/* Accessibility
---------------------------------------------- */
-@import "utilities/accessibility";
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+@import "modules/alignments";
 
-/* Alignments
---------------------------------------------- */
-@import "utilities/alignments";
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+@import "modules/clearings";
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+@import "site/secondary/widgets";
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+@import "site/site";
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+@import "modules/infinite-scroll";
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+@import "media/media";
+
+/*--------------------------------------------------------------
+# Slick
+--------------------------------------------------------------*/
+@import "flexslider/flexslider";
+
+/*--------------------------------------------------------------
+# Custom
+--------------------------------------------------------------*/
+@import "custom/custom";

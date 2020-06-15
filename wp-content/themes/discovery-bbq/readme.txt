@@ -14,7 +14,7 @@ A starter theme called discovery bbq.
 
 == Description ==
 
-Discovery BBQ New Site
+Description
 
 == Installation ==
 

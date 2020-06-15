@@ -1,0 +1,95 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 10) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+//	transition time
+@mixin transition($time: .25s){
+	-webkit-transition: all $time ease-in-out; /* Safari prior 6.1 */
+	transition: all $time ease-in-out;
+}
+
+//  flex setting
+@mixin flex($justifyContent: space-between, $alignItems: center, $flexWrap: wrap, $flexDirection: row){
+	display: flex;
+	justify-content: $justifyContent;
+	align-items: $alignItems;
+	flex-wrap: $flexWrap;
+	flex-direction: $flexDirection;
+}
+
+//  initialize ul
+@mixin unstyled(){
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+//  before after inline block
+@mixin baIBlock($display: block){
+	content: '';
+	display: $display;
+}
+
+//  golden bar at beginning
+@mixin goldenBar($width: 2px, $height: 16px, $bgColor: #C79F62){
+	@include baIBlock(inline-block);
+	width: $width;
+	height: $height;
+	background-color: $bgColor;
+	margin-right: 10px;
+}
+
+//  learn more button with arrow
+@mixin learnMoreButton(){
+	display: inline-block;
+	color: #373B3C;
+	font-size: 1.6rem;
+	@include transition();
+	span{
+		display: inline-block;
+		padding: .6em 0;
+		margin-right: 17px;
+		@include transition();
+	}
+
+	&:after{
+		@include goldenBar(120px, 4px);
+		display: block;
+		margin-right: 0;
+		@include transition();
+	}
+}
+
+//  title with + sign
+@mixin titleWithPlus(){
+	content: '+';
+	display: inline-block;
+	margin-left: 5px;
+}
+
