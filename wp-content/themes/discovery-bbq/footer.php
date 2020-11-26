@@ -12,22 +12,41 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'discovery-bbq' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'discovery-bbq' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'discovery-bbq' ), 'discovery-bbq', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
+        <div class="container">
+            <div class="row">
+                <div class="col-1-1">
+                    <div class="footer-heading">
+                        <h2>NEWSLETTER</h2>
+                        <div>Sign up to Discovery Fusion BBQ Newsletter</div>
+                    </div>
+                    <div class="footer-newsletter-form">
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1-1">
+                    <div class="footer-bottom">
+                        <div class="social-media"></div>
+                        <div class="copyright">
+                            &copy; <?= date('Y') ?> Discovery Fusion BBQ All Rights Reserved
+                        </div>
+                        <div class="dd">
+                            <a href="http://ddcreative.com.au/" target="_blank">Website by D&D Creative</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-
+<script>
+    $(function(){
+        $('#menu-icon').on('click', function () {
+            $(this).toggleClass('open')
+        })
+    })
+</script>
 <?php wp_footer(); ?>
 
 </body>
