@@ -32,7 +32,7 @@ $img_path = get_template_directory_uri( '/' );
 	<header id="masthead" class="site-header">
         <div class="container">
             <div class="row">
-                <div class="col-1-1">
+                <div class="col-xs-12">
                     <div class="header-wrapper">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo"><img src="<?php echo $img_path.'/images/logo.svg' ?>" alt="Discovery BBQ"></a>
                     <div id="book-a-table"><span class="arrow-down"></span><span>BOOK A TABLE</span><span class="arrow-down"></span></div>
