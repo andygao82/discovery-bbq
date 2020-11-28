@@ -2,7 +2,7 @@ var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
 var concat      = require('gulp-concat');
-
+var sourcemaps = require('gulp-sourcemaps');
 // CSS task
 function css() {
     return gulp
@@ -10,9 +10,11 @@ function css() {
             'sass/style.scss',
             'sass/*.scss'
         ])
+        .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(sass({outputStyle: 'compressed'}))
         .pipe(concat('styles.css'))
         .pipe(gulp.dest('./css'))
+        .pipe(sourcemaps.write())
         .pipe(browserSync.stream());
 }
 
